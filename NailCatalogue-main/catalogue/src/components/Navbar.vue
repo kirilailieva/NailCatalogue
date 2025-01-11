@@ -31,9 +31,9 @@
           >Contact</a>
         </li>
       </ul>
-     
     </div>
   </nav>
 </template>
 
-<script setup></script>
+<script setup>
+</script>

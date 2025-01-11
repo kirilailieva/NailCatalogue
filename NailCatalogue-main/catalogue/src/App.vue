@@ -2,7 +2,7 @@
   <div>
     <div>
       <header class="header">
-            <Navbar/>             
+        <Navbar />             
       </header>
     </div>
     <main>
@@ -14,7 +14,7 @@
         >
           {{ isAddingProduct ? 'Go Back to Product List' : 'Add a New Product' }}
         </button>
-      </div>
+      </div> 
 
       <!-- Conditional Rendering -->
       <section
@@ -29,7 +29,7 @@
           :products="filteredProducts"
           @delete-product="deleteProduct"
         />
-      </section>
+      </section> 
     </main>
   </div>
 </template>
@@ -98,7 +98,7 @@ const toggleAddProduct = () => {
 }
 </script>
 
-<style>
+<!-- <style>
 .header {
   display: flex;
   flex-direction:column;
@@ -107,9 +107,9 @@ const toggleAddProduct = () => {
 
 }
 .title {
-  font-size: 3rem; /* Large text */
-  font-weight: bold; /* Bold font */
-  color: white; /* White text color for contrast */
+  font-size: 3rem; 
+  font-weight: bold;
+  color: white;
   margin: 0;
   display: flex;
  
@@ -153,14 +153,6 @@ const toggleAddProduct = () => {
   background-color: #9653dd;
 }
 
-.bg-pink-200 {
-  display: flex;
-  justify-content: flex-end; /* Align everything to the right */
-  align-items: center; /* Center vertically */
-  padding: 20px;
-  gap: 10px;
-}
-
 .bg-pink-200 p {
   margin: 0;
   font-size: 1.25rem;
@@ -169,7 +161,6 @@ const toggleAddProduct = () => {
 
 .search-bar {
   display: flex;
-
   gap: 10px; /* Space between the search input and button */
 }
 
@@ -201,4 +192,4 @@ const toggleAddProduct = () => {
   align-self: left;
 
 }
-</style>
+</style> -->

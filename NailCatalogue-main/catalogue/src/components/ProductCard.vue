@@ -14,7 +14,7 @@
       <p class="product-card-price">
         ${{ product.price || '15' }}
       </p>
-      <button @click="deleteProduct" class="delete sm:py-1 sm:px-3 sm:text-sm md:py-2 md:px-4 md:text-base ">
+      <button @click="deleteProduct" class="delete">
         Delete
       </button>
     </div>
