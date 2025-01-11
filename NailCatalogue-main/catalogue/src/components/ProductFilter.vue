@@ -28,9 +28,9 @@ const updateFilter = () => {
 </script>
 <style>
 .bg-pink-200 {
-  display: flex;
-  justify-content: flex-end; /* Align everything to the right */
-  align-items: center; /* Center vertically */
+  display: flex; 
+  justify-content: flex-start; 
+  align-items: center;
   padding: 20px;
   gap: 10px;
 }

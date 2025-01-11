@@ -5,16 +5,16 @@
       :alt="product.name"
     >
     <div class="product-card-content">
-      <h3 class="product-card-title">
+      <h4 class="product-card-title">
         {{ product.name }}
-      </h3>
+      </h4>
       <p class="product-card-category">
         {{ product.category || 'Category Name' }}
       </p>
       <p class="product-card-price">
         ${{ product.price || '15' }}
       </p>
-      <button @click="deleteProduct">
+      <button @click="deleteProduct" class="delete">
         Delete
       </button>
     </div>
