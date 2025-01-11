@@ -2,9 +2,7 @@
   <div>
     <div>
       <header class="header">
-        <h1 class="title">
-          STORE
-        </h1>
+            <Navbar/>             
       </header>
     </div>
     <main>
@@ -26,11 +24,6 @@
         <AddProduct @add-product="addProduct" />
       </section>
       <section v-else>
-        <div class="bg-pink-200 text-center py-12">
-          <p class="text-xl mt-4">
-            Find your next favorite Product today
-          </p>
-        </div>
         <ProductFilter @filter-products="filterProducts" />
         <ProductList
           :products="filteredProducts"
@@ -46,6 +39,7 @@ import { ref, onMounted } from 'vue'
 import ProductFilter from './components/ProductFilter.vue'
 import AddProduct from './components/AddProduct.vue'
 import ProductList from './components/ProductList.vue'
+import Navbar from './components/Navbar.vue'
 
 const products = ref([]) // Start with an empty array
 const filterText = ref('')
@@ -106,16 +100,19 @@ const toggleAddProduct = () => {
 
 <style>
 .header {
-  background-color: #87ceeb; /* Sky blue background */
-  text-align: center; /* Center text horizontally */
-  padding: 20px 0; /* Add padding for spacing */
-}
+  display: flex;
+  flex-direction:column;
+  background-color: #9653dd;
+  padding: 0.1rem 1rem;
 
+}
 .title {
   font-size: 3rem; /* Large text */
   font-weight: bold; /* Bold font */
   color: white; /* White text color for contrast */
-  margin: 0; /* Remove default margin */
+  margin: 0;
+  display: flex;
+ 
 }
 
 .container {
@@ -123,11 +120,26 @@ const toggleAddProduct = () => {
   margin: 0 auto;
 }
 
+.navbar {
+  display: flex;
+  justify-content: left;
+  padding: 0px;
+  }
+
+.nav-list {
+  list-style: none;
+  display: inline-flex;
+  gap: 1.5rem;
+  padding: 0;
+  margin: 0;
+}
+
 /* Center the Add product button below the title */
 .cta-button {
-  margin-top: 20px; /* Space below the title */
+  margin-top: 20px;
+  margin-left: 20px;
   padding: 10px 20px;
-  background-color: #2563eb;
+  background-color: #6931a5;
   color: white;
   border: none;
   border-radius: 6px;
@@ -138,7 +150,7 @@ const toggleAddProduct = () => {
 }
 
 .cta-button:hover {
-  background-color: #cc1dd8;
+  background-color: #9653dd;
 }
 
 .bg-pink-200 {
@@ -157,6 +169,7 @@ const toggleAddProduct = () => {
 
 .search-bar {
   display: flex;
+
   gap: 10px; /* Space between the search input and button */
 }
 
@@ -169,7 +182,7 @@ const toggleAddProduct = () => {
 
 .search-button {
   padding: 10px 15px;
-  background-color: #cc1dd8;
+  background-color:#6931a5;
   color: white;
   border: none;
   border-radius: 5px;
@@ -177,7 +190,7 @@ const toggleAddProduct = () => {
 }
 
 .search-button:hover {
-  background-color: #cc1dd8;
+  background-color: #9653dd;
 }
 
 /* Styling for conditional sections */
@@ -185,5 +198,7 @@ const toggleAddProduct = () => {
   max-width: 600px;
   margin: 0 auto;
   padding: 20px;
+  align-self: left;
+
 }
 </style>

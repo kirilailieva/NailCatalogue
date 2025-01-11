@@ -3,9 +3,7 @@
     <h2 class="text-4xl font-bold">
       Welcome to the DNKa Catalogue
     </h2>
-    <p class="text-xl mt-4">
-      Find your next favorite product today
-    </p>
+    
   </section>
 </template>
 
